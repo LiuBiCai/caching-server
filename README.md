@@ -1,6 +1,6 @@
 # Caching server guide
 
-This repo contains basic scripts for automatic deploy [Lancache](http://lancache.net/) caching server.
+This repo contains basic scripts for automatic deploy [Lancache](http://lancache.net/) caching server on fresh installed os.
 
 Prerequisites
 ---
