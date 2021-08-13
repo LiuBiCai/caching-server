@@ -3,6 +3,9 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+mkdir -p /opt/caching-server
+cd /opt/caching-server
+
 #Install required libs
 sudo apt update && apt install -y sudo curl git
 
@@ -72,5 +75,6 @@ echo "Starting containers..."
 
 docker-compose up -d
 docker-compose ps
-
+echo "--------------------------------------------------------------\n"
 echo "Now you need to setup DNS server address on your router to $IP"
+echo "--------------------------------------------------------------\n"
