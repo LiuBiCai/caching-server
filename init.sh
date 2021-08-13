@@ -73,8 +73,28 @@ EOF
 
 echo "Starting containers..."
 
-docker-compose up -d
-docker-compose ps
+cat << EOF > /etc/systemd/system/caching-server.service
+[Unit]
+Description=Caching server stack
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+WorkingDirectory=/opt/caching-server/docker-compose
+
+ExecStart=/usr/local/bin/docker-compose up
+ExecStop=/usr/local/bin/docker-compose down
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl start caching-server
+systemctl enable caching-server
+systemctl status caching-server
+
 echo "--------------------------------------------------------------\n"
 echo "Now you need to setup DNS server address on your router to $IP"
 echo "--------------------------------------------------------------\n"
