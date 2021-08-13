@@ -14,7 +14,7 @@ HOWTO
 You need to download`init.sh`shell script from this repository and start it with root access level
 ```shell
 wget https://raw.githubusercontent.com/rpele/caching-server/main/init.sh
-bash sudo ./init.sh
+sudo bash ./init.sh
 ```
 
 After this you need to point DNS server to this machine. 
