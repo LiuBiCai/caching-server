@@ -13,7 +13,7 @@ HOWTO
 ---
 You need to download`init.sh`shell script from this repository and start it with root access level
 ```shell
-wget https://raw.githubusercontent.com/rpele/caching-server/main/init.sh
+wget https://raw.githubusercontent.com/LiuBiCai/caching-server/main/init.sh
 sudo bash ./init.sh
 ```
 
