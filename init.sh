@@ -69,6 +69,10 @@ CACHE_MAX_AGE=3650d
 ## Set the timezone for the docker containers, useful for correct timestamps on logs (default Europe/London)
 ## Formatted as tz database names. Example: Europe/Oslo or America/Los_Angeles
 TZ=Europe/London
+
+CACHE_DOMAINS_REPO="https://github.com/LiuBiCai/cache-domains.git"
+CACHE_DOMAINS_BRANCH="master"
+
 EOF
 
 echo "Starting containers..."
