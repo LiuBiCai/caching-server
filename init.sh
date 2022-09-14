@@ -87,7 +87,7 @@ After=docker.service
 Restart=always
 WorkingDirectory=/opt/caching-server/docker-compose
 
-ExecStart=/usr/local/bin/docker-compose up -d
+ExecStart=/usr/local/bin/docker-compose up
 ExecStop=/usr/local/bin/docker-compose down
 
 [Install]
