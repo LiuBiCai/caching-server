@@ -56,7 +56,7 @@ CACHE_ROOT=./lancache
 ## The cache server will prune content on a least-recently-used basis if it
 ## starts approaching this limit.
 ## Set this to a little bit less than your actual available space 
-CACHE_DISK_SIZE=1000000m
+CACHE_DISK_SIZE=450000m
 
 ## Change this to customise the size of the nginx cache manager (default 500m)
 ## DO NOT CHANGE THIS LIGHTLY. The defaults are enough to address 8TB of cache storage.  Increasing
